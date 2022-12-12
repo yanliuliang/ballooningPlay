@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         BallooningView ballooningView =new BallooningView(this);
         ballooningView.setLifeValue(lifeValue);
         ballooningView.setBallClick(() -> {
-            binding.layoutParent.removeViewAt(serialNumber);
+            binding.layoutParent.removeView(ballooningView);
         });
         binding.layoutParent.addView(ballooningView,serialNumber);
         ActionManager actionManager= new ActionManager().getInstance(this,ballooningView);
